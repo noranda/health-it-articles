@@ -1,8 +1,24 @@
 ---
+- slug: abstract
+  name: abstract
+- slug: ajph
+  name: ajph
+- slug: apha
+  name: apha
+- slug: assessment
+  name: assessment
+- slug: bmc
+  name: bmc
+- slug: ehr
+  name: ehr
 - slug: health-research-policy-and-systems
   name: health research policy and systems
+- slug: interoperability
+  name: interoperability
 - slug: intervention
   name: intervention
+- slug: ios-press
+  name: ios press
 - slug: medicine-2.0
   name: medicine 2.0
 - slug: mental-health
@@ -11,9 +27,13 @@
   name: mobile
 - slug: policy
   name: policy
+- slug: population-health
+  name: population health
 - slug: psychiatry-online
   name: psychiatry online
 - slug: research
   name: research
+- slug: science-direct
+  name: science direct
 - slug: smoking
   name: smoking

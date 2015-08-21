@@ -26,6 +26,7 @@ a {
 
   &:hover {
     color: darken($brand-primary, 10%);
+    text-decoration: none;
   }
 }
 
