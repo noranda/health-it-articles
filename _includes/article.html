@@ -47,12 +47,12 @@
   {% endif %}
   <div class="article-description collapse-group">
     <p>
-      <a class="btn btn-primary collapsed" data-toggle="collapse" data-target="#description">
+      <a class="btn btn-primary collapsed" data-toggle="collapse" data-target="#{{include.article.id | slugify}}">
         <span class="if-collapsed">More details</span>
         <span class="if-not-collapsed">Less details</span>
       </a>
     </p>
-    <div class="collapse" id="description">
+    <div class="collapse" id="{{include.article.id | slugify}}">
       {{include.article.content}}
     </div>
   </div>

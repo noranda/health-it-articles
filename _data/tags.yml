@@ -3,7 +3,11 @@
   name: health research policy and systems
 - slug: intervention
   name: intervention
+- slug: mental-health
+  name: mental health
 - slug: policy
   name: policy
+- slug: psychiatry-online
+  name: psychiatry online
 - slug: research
   name: research

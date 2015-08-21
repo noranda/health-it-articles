@@ -17,7 +17,7 @@ layout: default
 
   <div class="articles">
     {% assign prev_year = null %}
-    {% for post in site.posts reversed %}
+    {% for post in site.posts %}
       {% capture article_year %}{{post.date | date: "%Y"}}{% endcapture %}
       {% if prev_year == null or prev_year != article_year %}
         {% if prev_year != null %}
