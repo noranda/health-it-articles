@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<section id="main-content">
+  <h3>
+    <a id="articles-by-tag" class="anchor" href="#articles-by-tag" aria-hidden="true"><span class="octicon octicon-link"></span></a>Articles by tag: {{ page.tag }} ({{site.tags[page.tag].size}})
+  </h3>
+  {% if site.tags[page.tag] %}
+    <div class="articles">
+      {% assign prev_year = null %}
+
+      {% for article in site.tags[page.tag] reversed %}
+        {% capture article_year %}{{article.date | date: "%B"}}{% endcapture %}
+        {% if prev_year == null or prev_year != article_year %}
+          {% if prev_year != null %}
+            </div>
+          {% endif %}
+
+          {% assign prev_year = article_year %}
+          {% capture collapse_id %}{{article.date | date: "%B-%Y" | downcase}}{% endcapture %}
+          <a href="#{{collapse_id}}" class="year-divider" data-toggle="collapse" aria-expanded="true">{{article_year}}</a>
+
+          <div id="{{collapse_id}}" class="collapse in">
+        {% endif %}
+        {% include article.html article=article %}
+      {% endfor %}
+      </div>
+    </div>
+  {% else %}
+    <p>There are no articles for this tag.</p>
+  {% endif %}
+</section>

@@ -1,0 +1,25 @@
+# Site settings
+title: Health IT Articles
+email: noranda@norandabrown.com
+description: > # this means to ignore newlines until "baseurl:"
+  An open source list for health IT articles.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://noranda.github.io/health-it-articles" # the base hostname & protocol for your site
+twitter_username: noranda82
+github_username:  noranda
+
+# Build settings
+markdown: kramdown
+
+permalink: articles/:year/:month/:day/:title.html
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - Rakefile
+  - README.md
+
+sass:
+  sass_dir: _scss
+  style: :compressed

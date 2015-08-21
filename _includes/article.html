@@ -1,0 +1,56 @@
+{% assign tags_content = '' %}
+{% if include.article.tags.size > 0 %}
+  {% for article_tag in include.article.tags %}
+    {% assign tag = null %}
+    {% for data_tag in site.data.tags %}
+      {% if data_tag.name == article_tag %}
+        {% assign tag = data_tag %}
+      {% endif %}
+    {% endfor %}
+
+    {% if tag %}
+      {% capture tags_content_temp %}
+        {{ tags_content }} <span><a href="{{site.github.url}}/articles/tag/{{ tag.slug }}/">{{ tag.name }}</a></span>
+      {% endcapture %}
+      {% assign tags_content = tags_content_temp %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div class="article">
+  <div class="article-date">
+    {{include.article.published_date | date: "%B %d, %Y"}}
+  </div>
+  <div class="article-name">
+    {% if include.article.article_url %}
+      <a href="{{include.article.article_url}}" target="_blank">
+    {% endif %}
+    {{include.article.title | escape}}
+    {% if include.article.url %}
+      </a>
+    {% endif %}
+  </div>
+  <div class="article-author">
+    {{include.article.author}}
+  </div>
+  {% if include.article.publisher %}
+    <div class="article-publisher">
+      Published by:
+      {% if include.article.publisher_url %}
+        <a href="{{include.article.publisher_url}}" target="_blank">
+      {% endif %}
+      {{include.article.publisher | escape}}
+      {% if include.article.publisher_url %}
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+  <div class="article-description">
+    {{include.article.content}}
+  </div>
+  {% if include.article.tags %}
+    <div class="tags">
+      {{ tags_content }}
+    </div>
+  {% endif %}
+</div>
