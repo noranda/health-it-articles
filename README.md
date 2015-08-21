@@ -1,6 +1,6 @@
 # Health IT Articles
 
-An [open source list] of health IT articles.
+An [open source list] of health IT articles. To [subscribe] to this list, you will need a [GitHub] account.
 
 ### Use git to make changes
 
@@ -69,3 +69,5 @@ MIT
 [pull request]:https://github.com/noranda/health-it-articles/pulls
 [open source list]:http://noranda.github.io/health-it-articles/
 [Jekyll]:http://jekyllrb.com/
+[subscribe]:https://github.com/noranda/health-it-articles/subscription
+[github]:https://github.com/join
