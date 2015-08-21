@@ -328,9 +328,26 @@ footer {
 
 footer a {
   color: #666;
+
+  &:hover {
+    color: #444;
+  }
 }
-footer a:hover {
-  color: #444;
+
+.btn-primary {
+  background-color: white;
+  border-color: $brand-primary;
+  color: $brand-primary;
+}
+
+[data-toggle="collapse"] {
+  &.collapsed .if-not-collapsed {
+    display: none;
+  }
+
+  &:not(.collapsed) .if-collapsed {
+    display: none;
+  }
 }
 
 /* MISC */

@@ -4,8 +4,10 @@ layout: default
 
 <section id="main-content">
   <h3>
-    <a id="articles-by-tag" class="anchor" href="#articles-by-tag" aria-hidden="true"><span class="octicon octicon-link"></span></a>Articles by tag: {{ page.tag }} ({{site.tags[page.tag].size}})
+    <a id="articles-by-tag" class="anchor" href="#articles-by-tag" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+    Articles by tag: {{ page.tag }} ({{site.tags[page.tag].size}}) <a href="{{site.github.url}}/">&times;</a>
   </h3>
+
   {% if site.tags[page.tag] %}
     <div class="articles">
       {% assign prev_year = null %}
