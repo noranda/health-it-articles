@@ -3,11 +3,17 @@
   name: health research policy and systems
 - slug: intervention
   name: intervention
+- slug: medicine-2.0
+  name: medicine 2.0
 - slug: mental-health
   name: mental health
+- slug: mobile
+  name: mobile
 - slug: policy
   name: policy
 - slug: psychiatry-online
   name: psychiatry online
 - slug: research
   name: research
+- slug: smoking
+  name: smoking
